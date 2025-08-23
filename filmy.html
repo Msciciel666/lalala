@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Filmy Kingi Szczepanek – dostęp do ekskluzywnych nagrań przez sieć Tor .onion">
+  <title>Filmy Kingi Szczepanek</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+  <!-- Preloader -->
+  <div id="loader">
+    <p>Ładowanie…</p>
+  </div>
+
+  <header>
+    <h1>FILMY KINGI SZCZEPANEK</h1>
+    <p id="onion">bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion</p>
+    <button class="copy-btn" onclick="copyOnion()">Kopiuj adres .onion</button>
+    <p>Ostatnia aktualizacja: <span id="last-update"></span></p>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="zdjecia.html">Zdjęcia</a>
+      <a href="dokumenty.html">Dokumenty</a>
+    </nav>
+    <input
+      type="text"
+      id="search"
+      placeholder="Szukaj filmu..."
+      oninput="filterFiles()"
+    >
+  </header>
+
+  <main class="container">
+    <!-- Film 1 -->
+    <div class="file-container">
+      <h2>4 czerwca – wycinki z 4-godzinnego nagrania (mp3)</h2>
+      <p>Film nagrany 4 czerwca. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/4_czerwca_wycinki.mp3" download>Pobierz</a>
+      <p class="description">Nagranie telefoniczne z 4 czerwca 2024. Zawiera kluczowe fragmenty z całego nagrania.</p>
+    </div>
+    <!-- Film 2 -->
+    <div class="file-container">
+      <h2>7 czerwca, 21:22 (AAC)</h2>
+      <p>Film nagrany 7 czerwca. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/7_czerwca_21_22.aac" download>Pobierz</a>
+      <p class="description">Nagranie z 7 czerwca 2024, godz. 21:22. Zawiera istotne wypowiedzi.</p>
+    </div>
+    <!-- Film 3 -->
+    <div class="file-container">
+      <h2>7 czerwca 2024 – “AMFETAMINA O 15” (MP4)</h2>
+      <p>Film nagrany 7 czerwca o 15:00. Kliknij poniżej:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/7_czerwca_2024_AMFETAMINA_O_15.mp4" download>Pobierz</a>
+      <p class="description">Nagranie z dnia 7 czerwca 2024, godz. 15:00 – ważny materiał dowodowy.</p>
+    </div>
+    <!-- Film 4 -->
+    <div class="file-container">
+      <h2>14.01.2024, 20:44:10 – Webcam (WEBM)</h2>
+      <p>Film z kamery internetowej. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/14_01_2024_20_44_10_webcam.webm" download>Pobierz</a>
+      <p class="description">Nagranie z 14 stycznia 2024, kamera internetowa – pełny materiał.</p>
+    </div>
+    <!-- Film 5 -->
+    <div class="file-container">
+      <h2>20231020_175552.mp4</h2>
+      <p>Nagranie z 20 października 2023. Kliknij poniżej:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/20231020_175552.mp4" download>Pobierz</a>
+      <p class="description">Filmy z 20.10.2023 – zapis ważnych wydarzeń tego dnia.</p>
+    </div>
+    <!-- Film 6 -->
+    <div class="file-container">
+      <h2>20231021_192257.mp4</h2>
+      <p>Nagranie z 21 października 2023. Pobierz tutaj:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/20231021_192257.mp4" download>Pobierz</a>
+      <p class="description">Materiał z 21.10.2023 – pełne nagranie wydarzenia.</p>
+    </div>
+    <!-- Film 7 -->
+    <div class="file-container">
+      <h2>20231020_165637.mp4</h2>
+      <p>Nagranie z 20 października 2023. Kliknij poniżej:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/20231020_165637.mp4" download>Pobierz</a>
+      <p class="description">Zapis z 20.10.2023 – kluczowe momenty.</p>
+    </div>
+    <!-- Film 8 -->
+    <div class="file-container">
+      <h2>20231020_192257.mp4</h2>
+      <p>Nagranie z 20 października 2023. Pobierz tutaj:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/20231020_192257.mp4" download>Pobierz</a>
+      <p class="description">Pełny materiał z 20.10.2023 – istotne wydarzenia.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Kinga Szczepanek. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Filtr wyszukiwania -->
+  <script>
+    function filterFiles() {
+      const q = document.getElementById('search').value.toLowerCase();
+      document.querySelectorAll('.file-container').forEach(fc => {
+        const txt = fc.querySelector('h2').textContent.toLowerCase();
+        fc.style.display = txt.includes(q) ? '' : 'none';
+      });
+    }
+  </script>
+
+  <!-- Główne skrypty -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>

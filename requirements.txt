@@ -1,0 +1,11 @@
+# Runtime dependencies
+requests
+mutagen
+fastapi
+uvicorn
+# Development dependencies
+pytest
+pytest-cov
+pytest-asyncio
+black
+

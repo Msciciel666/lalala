@@ -1,0 +1,8 @@
+
+Scan Time:     2025-06-25 14:17:00
+Target File:   /var/www/zdjecia.zip
+MD5 Checksum:  ca81a04211c842f9c3d11f32830543d5
+Signatures:    445
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------

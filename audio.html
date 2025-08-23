@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Audio Kingi Szczepanek – ekskluzywne nagrania do pobrania przez sieć Tor .onion">
+  <title>Audio Kingi Szczepanek</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="audio">
+  <!-- Preloader -->
+  <div id="loader">
+    <p>Ładowanie…</p>
+  </div>
+
+  <header>
+    <h1>AUDIO KINGI SZCZEPANEK</h1>
+    <button class="copy-btn" onclick="copyOnion()">Kopiuj adres .onion</button>
+    <p>Ostatnia aktualizacja: <span id="last-update"></span></p>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="filmy.html">Filmy</a>
+      <a href="audio.html" class="active">Audio</a>
+      <a href="zdjecia.html">Zdjęcia</a>
+      <a href="dokumenty.html">Dokumenty</a>
+    </nav>
+    <input
+      type="text"
+      id="search"
+      placeholder="Szukaj nagrania..."
+      oninput="filterFiles()"
+    >
+  </header>
+
+  <main class="container">
+    <!-- Audio 1 -->
+    <div class="file-container">
+      <h2>4 czerwca – wycinki z 4-godzinnego nagrania (MP3)</h2>
+      <p>Audio nagrane 4 czerwca 2024. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/4%20czerwca%20wycinki%20z%204%20godzinnego%20nagrania%20nagrany%20moim%20telefonem..mp3" download>Pobierz</a>
+      <p class="description">Nagranie telefoniczne z 4 czerwca 2024 – kluczowe fragmenty.</p>
+    </div>
+    <!-- Audio 2 -->
+    <div class="file-container">
+      <h2>„Nie podzielę się tussi…” (FLAC)</h2>
+      <p>Audio z 7 czerwca 2024. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/7%20cze%202024%2C%2021.22%2C%20nie%20podziele%20sie%20tussi%2C%20czyli%20mam%2C%20amfetamine%20sama%20bede%20brala%20czyli%20tez%20mam%20amfetamine%2C%20jakbys%20mnie%20kochal%20kupilabym%20krysztal%20od%20kejsi.flac" download>Pobierz</a>
+      <p class="description">Fragment rozmowy z 7 czerwca 2024 – FLAC wysokiej jakości.</p>
+    </div>
+    <!-- Audio 3 -->
+    <div class="file-container">
+      <h2>7 cze, 21:22 (AAC)</h2>
+      <p>Plik AAC z 7 czerwca. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/7%20cze%2C%2021.22.aac" download>Pobierz</a>
+      <p class="description">Nagranie AAC z 7 czerwca 2024 – rozmiar 0 B (plik pusty).</p>
+    </div>
+    <!-- Audio 4 -->
+    <div class="file-container">
+      <h2>9 sie, 18:47 (AAC)</h2>
+      <p>Audio z 9 sierpnia. Kliknij poniżej:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/9%20sie%2C%2018.47%20(1).aac" download>Pobierz</a>
+      <p class="description">Nagranie AAC z 9 sierpnia 2024, godz. 18:47.</p>
+    </div>
+    <!-- Audio 5 -->
+    <div class="file-container">
+      <h2>9 sie, 20:42 (AAC)</h2>
+      <p>Audio z 9 sierpnia. Kliknij poniżej:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/9%20sie%2C%2020.42.aac" download>Pobierz</a>
+      <p class="description">Nagranie AAC z 9 sierpnia 2024, godz. 20:42.</p>
+    </div>
+    <!-- Audio 6 -->
+    <div class="file-container">
+      <h2>kinga_szczepanek_badgirl.mp3</h2>
+      <p>Audio MP3. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/kinga_szczepanek_badgirl.mp3" download>Pobierz</a>
+      <p class="description">Plik MP3 – „badgirl”.</p>
+    </div>
+    <!-- Audio 7 -->
+    <div class="file-container">
+      <h2>kingaszczepanekcpun.mp3</h2>
+      <p>Audio MP3. Kliknij poniżej, aby pobrać:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/kingaszczepanekcpun.mp3" download>Pobierz</a>
+      <p class="description">Oryginalny plik MP3 „cpun”.</p>
+    </div>
+    <!-- Audio 8 -->
+    <div class="file-container">
+      <h2>kingaszczepanekcpun — kopia.mp3</h2>
+      <p>Audio MP3 (kopia). Kliknij poniżej:</p>
+      <a href="http://bfis2clv35kwjeznflu7ecvvgztlrm5ez535c5h2w46aefbdpmguawid.onion/kingaszczepanekcpun%20—%20kopia.mp3" download>Pobierz</a>
+      <p class="description">Kopia pliku MP3 „cpun” (rozmiar 0 B).</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Kinga Szczepanek. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script>
+    function filterFiles() {
+      const q = document.getElementById('search').value.toLowerCase();
+      document.querySelectorAll('.file-container').forEach(fc => {
+        const txt = fc.querySelector('h2').textContent.toLowerCase();
+        fc.style.display = txt.includes(q) ? '' : 'none';
+      });
+    }
+    // Wyświetlenie daty ostatniej aktualizacji
+    document.getElementById('last-update').textContent = new Date().toLocaleDateString('pl-PL');
+  </script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

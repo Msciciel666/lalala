@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* GLOBAL STYLES */
+body {
+  background: radial-gradient(ellipse at center, #111 60%, #222 100%);
+  color: #0fffc7;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.6px;
+  overflow-x: hidden;
+}
+
+/* CONTAINER AND SECTIONS */
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.8rem;
+  padding: 0 20px;
+}
+
+.section {
+  background: rgba(20, 24, 30, 0.97);
+  border-radius: 1.7rem;
+  border: 3px solid #15ffb5;
+  box-shadow: 0 0 25px #15ffb577, 0 0 12px #00ffb8ee inset;
+  padding: 2.6rem 1.9rem 1.6rem 1.9rem;
+  transition: transform 0.2s ease-out, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.section:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 55px #00ffd899, 0 0 35px #20ffc3ee inset;
+}
+
+/* HEADINGS AND TEXT */
+.section h1 {
+  font-size: 2.4rem;
+  color: #00ffd8;
+  margin-top: 0;
+  margin-bottom: 0.35em;
+  font-weight: bold;
+  text-shadow: 0 0 20px #11ffc588, 0 0 4px #000;
+  letter-spacing: 1.3px;
+}
+
+.section .info-text, .section p {
+  color: #91fff8;
+  font-size: 1.2rem;
+  margin: 0.3em 0;
+  line-height: 1.55;
+}
+
+/* LINKS */
+.section a {
+  color: #00ffef;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.15rem;
+  transition: color 0.2s ease;
+}
+
+.section a:hover {
+  color: #ffffff;
+}
+
+/* LEAK DATA BADGE */
+.section::before {
+  content: "LEAK DATA";
+  position: absolute;
+  top: 15px;
+  right: -55px;
+  background: linear-gradient(90deg, #24ffe9e0 60%, transparent);
+  color: #133;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 5px 35px;
+  transform: rotate(25deg);
+  letter-spacing: 0.2em;
+  border-radius: 20px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+  .section {
+    padding: 1.7rem 0.9rem;
+  }
+  .section h1 {
+    font-size: 1.5rem;
+  }
+  .section .info-text, .section p {
+    font-size: 1rem;
+  }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #181818;
+}
+::-webkit-scrollbar-thumb {
+  background: #15ffb5;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px #0fffc7;
+}
+
+/* ANIMATIONS */
+.section, .gallery-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible, .gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

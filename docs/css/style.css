@@ -1,0 +1,201 @@
+/* ────────────────────────────────────────────────
+   darkweb666  ·  global stylesheet (mobile-first)
+   ──────────────────────────────────────────────── */
+
+/* 1. Zmienne kolorów i ustawienia bazowe */
+:root{
+    --bg: #121212;
+    --fg: #e0e0e0;
+    --accent:  #00ff9c;
+    --accent2: #bb86fc;
+    --radius: 8px;
+    --shadow: 0 0 10px rgba(0,0,0,.4);
+    --transition: .25s ease-in-out;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+  
+  *{box-sizing:border-box;margin:0;padding:0}
+  
+  /* 2. Layout & typografia (mobile first) */
+  body{
+    font-family:'Roboto',sans-serif;
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.6;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px 12px;               /* trochę odstępu od krawędzi */
+  }
+  
+  /* typografia responsywna z clamp() – płynnie skaluje się
+     pomiędzy podanymi wartościami min-pref-max */
+  h1{font-size:clamp(1.8rem,6vw,2.8rem);color:var(--accent);
+      text-shadow:0 0 8px rgba(0,255,156,.8);margin-bottom:10px}
+  h2{font-size:clamp(1.3rem,4.5vw,1.9rem);color:var(--accent);margin-bottom:15px}
+  
+  /* header & footer */
+  header,footer{
+    width:100%;
+    text-align:center;
+    background:#000;
+    border:2px solid var(--accent);
+  }
+  header{padding:20px 0;border-bottom-width:2px}
+  footer{padding:15px 0;font-size:.85em;color:#888;border-top-width:2px}
+  
+  /* nawigacja – domyślnie kolumna (mobile) */
+  nav{
+    margin-top:14px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  nav a{
+    color:var(--accent);
+    font-weight:500;
+    text-decoration:none;
+    transition:color var(--transition);
+  }
+  nav a:hover{color:#fff}
+  
+  main{max-width:860px;width:100%;padding:30px 0}
+  
+  /* sekcje */
+  section{
+    background:#1e1e1e;
+    margin-bottom:35px;
+    padding:22px;
+    border-left:4px solid var(--accent);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+  ul{list-style:square;margin-left:24px}
+  a{color:var(--accent2);transition:color var(--transition)}
+  a:hover{color:#fff}
+  
+  /* przycisk kopiowania */
+  .copy-btn{
+    background:var(--accent);
+    color:#121212;
+    border:0;
+    padding:6px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:background var(--transition),color var(--transition);
+  }
+  .copy-btn:hover{
+    background:#fff;
+    color:#000;
+  }
+  
+  /* ────────────────────────────────────────────────
+     Breakpoint 1 – ≥ 600 px (małe tablety w poziomie)
+     ──────────────────────────────────────────────── */
+  @media (min-width:600px){
+    nav{
+      flex-direction:row;
+      justify-content:center;
+      gap:18px;
+    }
+  }
+  
+  /* ────────────────────────────────────────────────
+     Breakpoint 2 – ≥ 768 px (tablety / małe laptopy)
+     ──────────────────────────────────────────────── */
+  @media (min-width:768px){
+    body{padding:25px 20px;}
+    main{padding:35px 0}
+    section{padding:26px}
+  }
+  
+  /* ────────────────────────────────────────────────
+     Breakpoint 3 – ≥ 992 px (desktopy)
+     ──────────────────────────────────────────────── */
+  @media (min-width:992px){
+    body{padding:35px 30px;}
+    h1{font-size:2.6rem}
+    h2{font-size:1.9rem}
+    nav a{font-size:1.05rem}
+  }
+  body{opacity:0;transition:opacity .8s ease-out}  /* stan początkowy */
+  body.page-visible{opacity:1}
+  /* \u2500\u2500 index page styles \u2500\u2500 */
+  body.home{
+    background: radial-gradient(circle at center, #222, #000);
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    min-height:100vh;
+    overflow:hidden;
+  }
+  .home .container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap:20px;
+    width:90%;
+    max-width:1200px;
+    padding:20px;
+    transition:all .3s ease;
+  }
+  .home .section{
+    background:rgba(20,20,20,.85);
+    border:2px solid #0f0;
+    padding:20px;
+    text-align:center;
+    backdrop-filter:blur(5px);
+    border-radius:15px;
+    box-shadow:0 6px 12px rgba(0,255,0,.4);
+    transition:transform .3s ease;
+  }
+  .home .section:hover{transform:scale(1.05)}
+  .home .section a{color:#0f0;text-decoration:underline;transition:color .3s ease}
+  .home .section a:hover{color:#f39c12}
+  .home h1{font-size:2em;margin-bottom:15px;text-shadow:0 0 10px #00ff00,0 0 20px #00ff00}
+  .home .footer{margin-top:40px;font-size:1.1em;text-align:center;color:#0f0;border-top:2px solid #0f0;padding-top:20px}
+  .home .footer ul{list-style-type:none;padding:0;font-size:1.2em}
+  .home .footer li{margin:10px 0}
+  .home .info-text{font-size:1.1em;margin-bottom:15px}
+  @media (max-width:768px){
+    .home .container{
+      grid-template-columns:repeat(2,1fr);
+      grid-template-rows:repeat(4,1fr);
+    }
+  }
+  
+  /* about loader */
+  #loader{display:grid;place-items:center;height:100vh}
+  /* generic containers for download pages */
+  .container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+    background-color:#fff;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  }
+  .section-title{
+    font-size:2rem;
+    color:#2c3e50;
+    text-align:center;
+    margin-bottom:40px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+  }
+  .file-container{margin-bottom:40px;border:1px solid #ddd;padding:20px;border-radius:8px;background-color:#fafafa;box-shadow:0 2px 5px rgba(0,0,0,0.05);transition:background-color .3s ease}
+  .file-container:hover{background-color:#f0f0f0}
+  .file-container h2{font-size:1.8rem;color:#2980b9;margin-bottom:10px}
+  .file-container p{font-size:1.1rem;color:#555;margin-bottom:20px}
+  .file-container .description{font-size:1rem;color:#7f8c8d;margin-top:10px;font-style:italic}
+  .file-container a{display:inline-block;padding:12px 25px;font-size:1.1rem;text-decoration:none;color:#fff;background-color:#3498db;border-radius:5px;transition:background-color .3s ease,transform .2s ease}
+  .file-container a:hover{background-color:#2980b9;transform:scale(1.05)}
+  footer{background-color:#333;color:#fff;padding:15px;text-align:center;font-size:1rem;margin-top:50px}
+  footer a{color:#3498db;text-decoration:none}
+  footer a:hover{text-decoration:underline}       

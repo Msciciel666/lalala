@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MARCIN KLATKA – LACRIMADISANGUE</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #0d0d0d;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.7em;
+      margin-bottom: 38px;
+      text-align: center;
+      color: #ffc107;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      letter-spacing: 2px;
+    }
+    .intro-section {
+      background-color: #18171c;
+      color: #fff6c2;
+      border-left: 4px solid #ff5722;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      padding: 22px 18px;
+      margin: 28px 0;
+      width: 100%;
+      max-width: 820px;
+    }
+    .intro-section h2 {
+      color: #ff5722;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      margin-bottom: 14px;
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(255,87,34,0.35);
+    }
+    .intro-section p {
+      font-size: 1.12rem;
+      line-height: 1.62;
+      margin-bottom: 14px;
+      color: #fff6c2;
+    }
+    .links-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 28px 0 12px 0;
+      gap: 14px;
+    }
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 280px;
+      padding: 16px 22px;
+      font-size: 1.17em;
+      font-weight: bold;
+      border: none;
+      border-radius: 11px;
+      text-decoration: none;
+      letter-spacing: 1.1px;
+      cursor: pointer;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.14);
+      margin: 0 auto;
+    }
+    .link-btn.mirror {
+      background: #242424;
+      color: #ff5722;
+      border: 2px solid #ff5722;
+    }
+    .link-btn.mirror:hover {
+      background: #ff5722;
+      color: #fff;
+    }
+    .tabs {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 35px;
+    }
+    .tab {
+      background-color: #2b2b2b;
+      color: #ffc107;
+      border: none;
+      padding: 17px 35px;
+      font-size: 1.25em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 9px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.24);
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+    .tab:hover {
+      background-color: #ff5722;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    .content { display: none; width: 100%; max-width: 820px; text-align: center; }
+    .active { display: block; }
+    footer {
+      margin-top: 40px;
+      font-size: 0.92em;
+      color: #aaaaaa;
+    }
+    @media (max-width: 600px) {
+      .tab { padding: 11px 14vw; font-size: 1em; }
+      h1 { font-size: 1.5em; }
+      .link-btn { min-width: 87vw; padding: 12px 2vw; font-size: 0.92em; }
+    }
+  </style>
+</head>
+<body>
+  <h1>MARCIN KLATKA – LACRIMADISANGUE</h1>
+
+  <section class="intro-section">
+    <h2>Groźby, powiązania i działalność przestępcza</h2>
+    <p>Marcin Klatka to jeden z czołowych członków klubu <b>Lacrima di Sangue</b>. Współpracował z Kingą Szczepanek przy organizowaniu i ochronie przestępczego procederu, grożąc świadkom oraz osobom, które próbowały ujawnić prawdę.</p>
+    <p>Poniżej znajdziesz materiały dowodowe – screeny, nagrania, archiwalne groźby oraz analizy działań Marcina Klatki i jego ekipy. Jego działalność obejmuje nie tylko zastraszanie, ale także aktywny udział w ukrywaniu narkotyków, brudnych pieniędzy oraz wymuszeniach.</p>
+    <p>Publikujemy to w imię sprawiedliwości i ochrony kolejnych potencjalnych ofiar. Każdy plik jest potwierdzony screenami SMS-ów, logami, materiałem wideo i analizą powiązań.</p>
+  </section>
+
+
+
+  <div class="tabs">
+    <a class="tab" href="index.html">🔙 Powrót: Kinga Szczepanek</a>
+    <a class="tab" href="klatka_galeria.html">📸 Galeria Klatka - screeny idioty</a>
+    
+  </div>
+
+  <footer>
+    :: LACRIMADISANGUE ARCHIVE | Ostatnia synchronizacja: <span id="last-update"></span> ::
+  </footer>
+  <script>
+    document.getElementById('last-update').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

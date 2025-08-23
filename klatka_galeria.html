@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria Klatka – Lacrima di Sangue</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Courier New', monospace;
+      background: #111016;
+      color: #fff6c2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 0 40px 0;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 28px;
+      text-align: center;
+      color: #ff5722;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+      width: 96vw;
+      max-width: 1050px;
+      margin: 0 auto 24px auto;
+    }
+    .photo-card {
+      background: #1b181d;
+      border: 2px solid #ff5722;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .photo-card:hover {
+      transform: scale(1.035);
+      box-shadow: 0 8px 28px rgba(255,87,34,0.14);
+      border-color: #ffc107;
+    }
+    .photo-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      padding: 14px 16px 10px 16px;
+      font-size: 1.01em;
+      color: #fff6c2;
+      text-align: left;
+      word-break: break-word;
+    }
+    .tabs {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    .tab {
+      background-color: #2b2b2b;
+      color: #ffc107;
+      border: none;
+      padding: 13px 25px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 9px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.24);
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      text-decoration: none;
+      margin-top: 7px;
+    }
+    .tab:hover {
+      background-color: #ff5722;
+      color: #fff;
+      transform: scale(1.06);
+    }
+    footer {
+      margin-top: 38px;
+      font-size: 0.9em;
+      color: #aaaaaa;
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 1.2em; }
+      .gallery { grid-template-columns: 1fr; gap: 15px; }
+      .photo-card img { height: 170px; }
+      .tab { font-size: 0.95em; padding: 9px 7vw; }
+    }
+  </style>
+</head>
+<body>
+  <h1>GALERIA: MARCIN KLATKA / LACRIMA DI SANGUE</h1>
+
+  <div class="tabs">
+    <a class="tab" href="klatka.html">🔙 Powrót: Klatka</a>
+    <a class="tab" href="index.html">🏠 Kinga Szczepanek</a>
+    <a class="tab" href="klatka_filmy.html">🎬 Filmy/Audio</a>
+    <a class="tab" href="klatka_dokumenty.html">📁 Dokumenty</a>
+  </div>
+
+  <div class="gallery">
+    <!-- Przykładowe karty - podmień ścieżki/teksty -->
+    <div class="photo-card">
+      <img src="klatka.jpg" alt="SMS z groźbami od Marcina Klatki">
+      <div class="caption">SMS z pogróżkami od Marcina Klatki (czerwiec 2025).</div>
+    </div>
+    <div class="photo-card">
+      <img src="klatka2.jpg" alt="Zdjęcie Marcina Klatki w klubie Lacrima di Sangue">
+      <div class="caption">Marcin Klatka przemytnik z Lacrimadisangue</div>
+    </div>
+    <div class="photo-card">
+      <img src="klatka3.jpg" alt="Kolejna groźba Klatki">
+      <div class="caption">Kolejna groźba wobec świadków – archiwalny dowód (lipiec 2025).</div>
+    </div>
+    <div class="photo-card">
+      <img src="kaltka4.jpg" alt="Kolejna groźba Klatki">
+      <div class="caption">Kolejna groźba wobec świadków – archiwalny dowód (lipiec 2025).</div>
+    </div>
+    <!-- Dodawaj kolejne zdjęcia według tego szablonu -->
+     <div class="photo-card">
+      <img src="klatka_kurwielec.jpg" alt="Kolejna groźba Klatki">
+      <div class="caption">Kolejna groźba wobec świadków – archiwalny dowód (lipiec 2025).</div>
+    </div>
+     </div>
+
+  <footer>
+    :: LACRIMA GALERIA | Ostatnia aktualizacja: <span id="last-update"></span> ::
+  </footer>
+  <script>
+    document.getElementById('last-update').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

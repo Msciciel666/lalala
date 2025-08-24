@@ -1,0 +1,525 @@
+````yaml
+---
+case_id: kinga-szczepanek-2024
+status: open
+created_at: 2025-08-24T05:30+02:00
+source: chatgpt-analiza
+participants: [TOKEN_A, TOKEN_B, "Truteń Kapitan"]
+risk_flags: [art_190a_KK, art_212_KK, art_216_KK, art_207_KK, ujawnienie_danych]
+latest_update: 2025-08-24T05:30+02:00
+---
+## TL;DR
+- Screeny zawierają groźby, wulgaryzmy, wyzwiska, publiczne oskarżenia seksualne i numer telefonu osoby trzeciej.
+- Istnieje potencjalna odpowiedzialność karna: nękanie, zniesławienie, znieważenie, przemoc psychiczna.
+- Publikacja lub dystrybucja materiałów grozi oskarżeniem o współudział w przestępstwie.
+- Ryzyko naruszenia RODO/GDPR przez ujawnienie danych osobowych.
+- Rekomendacja: archiwizować jako dowód, nie publikować bez anonimizacji, konsultować z prawnikiem.
+
+## Oś czasu
+
+| timestamp           | event_id | description                                   |
+|---------------------|----------|-----------------------------------------------|
+| 2025-08-22T20:00+02 | EVT001   | Otrzymanie screenów z groźbami i oskarżeniami |
+| 2025-08-22T20:15+02 | EVT002   | Analiza materiałów przez ChatGPT              |
+| 2025-08-24T05:30+02 | EVT003   | Rejestracja materiału w ewidencji             |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach  | evidence_ids      | comment                                                 |
+|--------|-------|---------|--------|------|--------|-------------------|---------------------------------------------------------|
+| 5      | 1     | 3       | 5      | 4    | 3      | [D001]            | Wysokie ryzyka prawne, emocjonalność, ryzyko publikacji |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D001", "type": "screenshot", "timestamp": "2025-08-22T20:00+02", "description": "Zrzuty z komunikatora – groźby, wyzwiska, publiczne oskarżenia, podanie numeru telefonu osoby trzeciej, presja, emocjonalność.", "tags": ["threats", "profanity", "accusations", "PII", "harassment"], "status": "verified"}
+````
+
+## Tezy i hipotezy
+
+| thesis\_id | description                                                               | evidence\_ids | status |
+| ---------- | ------------------------------------------------------------------------- | ------------- | ------ |
+| T001       | W przesłanych materiałach doszło do nękania i zniesławienia               | \[D001]       | open   |
+| T002       | Doszło do ujawnienia danych osobowych osoby trzeciej                      | \[D001]       | open   |
+| T003       | Materiał może być wykorzystany jako dowód przemocy psychicznej lub groźby | \[D001]       | open   |
+
+## Dalsze kroki (72h)
+
+* Zarchiwizować materiał offline z pełnymi metadanymi.
+* Wyczyścić materiał z PII przed ewentualnym użyciem w repozytoriach/publicznie.
+* Skonsultować z prawnikiem możliwość użycia materiału jako dowodu.
+* Rozważyć zgłoszenie sprawy organom ścigania w związku z groźbami i nękaniem.
+* Zabezpieczyć backupy (offline, bezpieczne miejsce).
+
+---
+
+---
+
+case\_id: kinga-szczepanek-2024
+status: open
+created\_at: 2025-08-24T05:40+02:00
+source: raport-analiza-cyfrowa
+participants: \[TOKEN\_A, TOKEN\_B, "Kinga Szczepanek", "Smoluch Wojciech"]
+risk\_flags: \[gaslighting, presja\_emocjonalna, zdrada, kompromitacja, przejęcie\_konta, PII, blokada\_konta, ingerencja, dowód\_audio\_video]
+latest\_update: 2025-08-24T05:40+02:00
+--------------------------------------
+
+## TL;DR
+
+* Zmapowano 7 kluczowych plików (SMS, WhatsApp, e-mail, FetLife, wideo) potencjalnie obciążających Kingę Szczepanek.
+* Materiały obejmują presję emocjonalną, zdrady, manipulacje, działania kompromitujące, blokady kont oraz kontekst zdrowotny.
+* Plik wideo wymaga dalszej analizy: ekstrakcja kadrów, transkrypcja.
+* Wszystkie pliki należy zabezpieczyć i oznaczyć pod kątem fragmentów kluczowych dla linii obrony lub oskarżenia.
+* Rekomendacja: chronologiczne połączenie zdarzeń, dalsza analiza forensyczna.
+
+## Oś czasu
+
+| timestamp           | event\_id | description                                                     |
+| ------------------- | --------- | --------------------------------------------------------------- |
+| 2023-09-15T18:54+02 | EVT004    | Zmiana hasła na Facebooku – możliwa ingerencja, przejęcie konta |
+| 2023-09-20T23:25+02 | EVT005    | WhatsApp: potwierdzenie relacji, aktywna komunikacja            |
+| 2023-12-07T09:29+02 | EVT006    | FetLife: blokada konta (PII Malicious)                          |
+| 2023-12-07T19:41+02 | EVT007    | SMS z osobą trzecią – tło zdrowotne, presja                     |
+| 2023-12-07T21:29+02 | EVT008    | WhatsApp: rozmowa o zdradzie, wycofanie emocjonalne             |
+| 2023-12-08T05:48+02 | EVT009    | SMS od „Szczrpaneknkinga” – manipulacja, gaslighting            |
+| 2024-02-15T19:36+02 | EVT010    | Wideo .mp4 – nieprzetworzony, do dalszej analizy                |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence\_ids       | comment                      |
+| ------ | ----- | ------- | ------ | ---- | ----- | ------------------- | ---------------------------- |
+| 5      | 2     | 4       | 5      | 4    | 3     | \[D002, D004, D007] | Potencjalnie mocne dowody    |
+| 4      | 3     | 3       | 4      | 3    | 2     | \[D001, D003, D005] | Kontekst, relacje, eskalacja |
+| 5      | 1     | 5       | 5      | 4    | 3     | \[D006]             | Wideo, wymaga analizy        |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D001", "type": "screenshot", "filename": "Screenshot_20230915-185435_Poczta.jpg", "timestamp": "2023-09-15T18:54+02", "description": "Zmiana hasła na Facebooku (Kraków, Chrome/Windows); możliwy konflikt, przejęcie konta.", "tags": ["facebook", "zmiana_hasla", "ingerencja"], "status": "verified"}
+{"evidence_id": "D002", "type": "screenshot", "filename": "Screenshot_20230920-232505_WhatsApp.jpg", "timestamp": "2023-09-20T23:25+02", "description": "WhatsApp – kontakt 'Kinga Szvzepanek', potwierdzenie realnej relacji, aktywna komunikacja.", "tags": ["whatsapp", "kontakt", "relacja"], "status": "verified"}
+{"evidence_id": "D003", "type": "screenshot", "filename": "Screenshot_20231207-092952_Samsung Internet.jpg", "timestamp": "2023-12-07T09:29+02", "description": "FetLife – blokada konta (PII Malicious), zgłoszenie prywatnej rozmowy.", "tags": ["fetlife", "blokada", "PII"], "status": "verified"}
+{"evidence_id": "D004", "type": "screenshot", "filename": "Screenshot_20231207-194103_Messages.jpg", "timestamp": "2023-12-07T19:41+02", "description": "SMS z osobą trzecią (Smoluch Wojciech) – potwierdzenie sytuacji zdrowotnej Rafała, tło do obrony.", "tags": ["sms", "osoba_trzecia", "zdrowie"], "status": "verified"}
+{"evidence_id": "D005", "type": "screenshot", "filename": "Screenshot_20231207-212924_WhatsApp.jpg", "timestamp": "2023-12-07T21:29+02", "description": "WhatsApp – rozmowa o seksie z innym mężczyzną, brak zaprzeczenia, komunikaty 'Lecz się', wycofanie emocjonalne.", "tags": ["whatsapp", "zdrada", "emocje"], "status": "verified"}
+{"evidence_id": "D006", "type": "screenshot", "filename": "Screenshot_20231208-054816_Messages.jpg", "timestamp": "2023-12-08T05:48+02", "description": "SMS od 'Szczrpaneknkinga' – ironia, przerzucanie winy, chłodna/pasywno-agresywna postawa, gaslighting.", "tags": ["sms", "manipulacja", "gaslighting"], "status": "verified"}
+{"evidence_id": "D007", "type": "video", "filename": "20240215_193651 (1).mp4", "timestamp": "2024-02-15T19:36+02", "description": "Wideo .mp4 (76s, FullHD) – nieprzetworzony, do dalszej analizy (ekstrakcja kadrów, transkrypcja dźwięku).", "tags": ["video", "do_analizy"], "status": "pending"}
+```
+
+## Tezy i hipotezy
+
+| thesis\_id | description                                      | evidence\_ids       | status  |
+| ---------- | ------------------------------------------------ | ------------------- | ------- |
+| T004       | Kinga Szczepanek stosuje manipulację/gaslighting | \[D006, D002]       | open    |
+| T005       | Potwierdzenie zdrady/wycofania emocjonalnego     | \[D005]             | open    |
+| T006       | Presja emocjonalna, działania eskalacyjne        | \[D001, D004, D003] | open    |
+| T007       | Wideo może potwierdzić kompromitujące zachowania | \[D007]             | pending |
+
+## Dalsze kroki (72h)
+
+* Zarchiwizować wszystkie wymienione pliki (z pełnymi metadanymi).
+* Oznaczyć kluczowe fragmenty (zdrady, manipulacje, eskalacje) w każdym materiale.
+* Dokonać wstępnej analizy wideo (.mp4): wyodrębnić klatki i sporządzić transkrypcję dźwięku.
+* Zbudować szczegółową chronologię na osi czasu (łącznie z wcześniejszymi dowodami).
+* Skonsultować się z ekspertem od analizy cyfrowej w zakresie zabezpieczenia śladów i autentyczności materiałów.
+
+---
+
+---
+
+case\_id: kinga-szczepanek-2024
+status: open
+created\_at: 2025-08-24T05:55+02:00
+source: analiza-google-drive
+participants: \[TOKEN\_A, "Kinga Szczepanek", "Szymon Wasilewski"]
+risk\_flags: \[szantaż, nadużycia\_medyczne, narkotyki, włamania, kompromitacja, brak\_zdjęć, opis\_screenów]
+latest\_update: 2025-08-24T05:55+02:00
+--------------------------------------
+
+## TL;DR
+
+* Na Google Drive brak natywnych plików graficznych (JPG/PNG); istnieją wyłącznie dokumenty tekstowe z transkrypcjami screenów i zarzutami wobec Kingi Szczepanek.
+* Pliki tekstowe zawierają dowody włamań, nadużyć lekarskich, szantażu, zarzuty o narkotyki, szantaż, kompromitujące kontakty.
+* Świadkowie (np. Szymon Wasilewski) oraz inni dostawcy narkotyków mogą być istotni dla budowy mapy powiązań.
+* Brak oryginalnych zdjęć – możliwe, że znajdują się na zewnętrznych nośnikach USB.
+* Rekomendacja: zabezpiecz pliki, uzupełnij brakujące materiały, stwórz mapę dowodów, przygotuj się na konsultacje prawne.
+
+## Oś czasu
+
+| timestamp           | event\_id | description                                                                                              |
+| ------------------- | --------- | -------------------------------------------------------------------------------------------------------- |
+| 2024-01-26T13:29+02 | EVT011    | Screenshot\_20240126\_132956\_Messages (doc): propozycja szpitala, presja czasowa, bez wzmianek o Kindze |
+| 2024-01-26T13:41+02 | EVT012    | Screenshot\_20240126\_134122\_Messages / 133127: prośby, wstyd, leczenie, ADHD, brak bezpośredniej Kingi |
+| 2024-01-26T13:30+02 | EVT013    | Screenshot\_20240126\_133010\_Messages (doc): sugestie stresu, osoby trzecie, kontekst                   |
+| 2024-01-26T14:00+02 | EVT014    | zgloszenie strzepanek.docx: zarzuty o włamania, szantaż, nadużycia                                       |
+| 2024-01-26T14:15+02 | EVT015    | zawiadomienie o popełnieniu przestępstwa.docx: zarzuty o narkotyki, prostytucję, nadużycia medyczne      |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence\_ids       | comment                                                     |
+| ------ | ----- | ------- | ------ | ---- | ----- | ------------------- | ----------------------------------------------------------- |
+| 5      | 1     | 4       | 3      | 3    | 2     | \[D008, D009]       | Poważne zarzuty, wymagają ochrony i konsultacji prawnej     |
+| 4      | 2     | 3       | 2      | 2    | 2     | \[D010, D011, D012] | Kontekst, relacje, presja, brak bezpośrednich dowodów Kingi |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D008", "type": "doc", "filename": "zgloszenie strzepanek.docx", "timestamp": "2024-01-26T14:00+02", "description": "Opis licznych zarzutów wobec Kingi Szczepanek: włamania, próby resetu haseł, dostęp do bankowości/Ubera, gubienie dokumentów pacjenta, włamania na YouTube/Badoo, szantaż nagraniami, propozycja łapówki.", "tags": ["zarzuty", "włamania", "szantaż", "bankowość", "ubezpieczenia"], "status": "verified"}
+{"evidence_id": "D009", "type": "doc", "filename": "zawiadomienie o popełnieniu przestępstwa.docx", "timestamp": "2024-01-26T14:15+02", "description": "Formalny dokument do prokuratury: zarzuty wobec Kingi Szczepanek o narkotyki, nadużycie funkcji lekarskiej, wypisywanie recept, szantaż groźbą utraty pracy, elementy prostytucji i uzależnienia.", "tags": ["zarzuty", "narkotyki", "nadużycia_medyczne", "prokuratura"], "status": "verified"}
+{"evidence_id": "D010", "type": "doc", "filename": "Screenshot_20240126_132956_Messages", "timestamp": "2024-01-26T13:29+02", "description": "Transkrypcja screenów: propozycja szpitala, presja czasowa, chaotyczne wypowiedzi, brak wzmianek o Kindze.", "tags": ["transkrypcja", "presja", "szpital"], "status": "review"}
+{"evidence_id": "D011", "type": "doc", "filename": "Screenshot_20240126_134122_Messages", "timestamp": "2024-01-26T13:41+02", "description": "Transkrypcja: prośby o wysłanie materiałów, deklaracja potrzeby leczenia, ADHD, wstyd, miejsce 'Sinnergety', brak bezpośredniej Kingi.", "tags": ["transkrypcja", "leczenie", "ADHD", "wstyd"], "status": "review"}
+{"evidence_id": "D012", "type": "doc", "filename": "Screenshot_20240126_133010_Messages", "timestamp": "2024-01-26T13:30+02", "description": "Transkrypcja: Szymon Wasilewski, presja, polecenie kontaktu z inną osobą, stres, pośredni kontekst spraw
+```
+
+
+y.", "tags": \["transkrypcja", "presja", "Szymon\_Wasilewski"], "status": "review"}
+
+````
+
+## Tezy i hipotezy
+
+| thesis_id | description                                              | evidence_ids    | status      |
+|-----------|----------------------------------------------------------|-----------------|-------------|
+| T008      | Kinga Szczepanek dopuściła się nadużyć medycznych/szantażu | [D008, D009]    | open        |
+| T009      | W dokumentach opisane są działania kompromitujące, ale brak bezpośrednich zdjęć | [D010, D011, D012] | open        |
+
+## Dalsze kroki (72h)
+
+- Zabezpieczyć i zarchiwizować wszystkie wymienione pliki (tworząc kopie, oryginały w Drive).
+- Ustalić miejsce przechowywania natywnych zdjęć, przenieść do Drive/bezpiecznego repozytorium.
+- Przetworzyć nowe zdjęcia przez OCR/analizę wizualną po ich dodaniu.
+- Ułożyć mapę dowodów w chronologii (daty wiadomości, momenty włamań).
+- Przygotować konsultację prawną ze wszystkimi zgromadzonymi dowodami.
+
+---
+
+---
+case_id: kinga-szczepanek-2024
+status: open
+created_at: 2025-08-24T06:10+02:00
+source: OCR-screenshots
+participants: [TOKEN_A, "Kinga Szczepanek"]
+risk_flags: [przemoc_psychiczna, gaslighting, presja, szantaż, aktywność_FetLife, dowód_tożsamości, lokalizacja, wizualne_dowody, brak_tekstu_OCR]
+latest_update: 2025-08-24T06:10+02:00
+---
+## TL;DR
+- Przeprowadzono OCR na przesłanych zdjęciach rozmów SMS/MMS/WhatsApp: wykryto wulgaryzmy, obelgi, gaslighting, wymuszanie, szantaż emocjonalny, pogardę, oraz potwierdzono aktywność Kingi Szczepanek na portalu FetLife.
+- Uzyskano dowód tożsamości i działalności zawodowej Kingi (wiadomość dot. rachunku).
+- Plik `ALE RYCZY BECZY  PSYCHOL.jpg` nie zawiera tekstu, ale pokazuje twarz Kingi w stanie płaczu (dowód wizualny o silnym ładunku emocjonalnym/kompromitującym).
+- Rekomendacja: archiwizacja, dołączenie OCR do akt sprawy, wyodrębnienie kategorii dowodów.
+
+## Oś czasu
+
+| timestamp           | event_id | description                                                         |
+|---------------------|----------|---------------------------------------------------------------------|
+| 2023-12-08T05:49+02 | EVT016   | Screenshot_20231208-054920_Messages.jpg – wulgaryzmy, gaslighting   |
+| 2023-12-08T07:01+02 | EVT017   | Screenshot_20231208-070100_Messages.jpg – pogarda, kontrola         |
+| 2023-12-08T05:53+02 | EVT018   | Screenshot_20231208-055307_Messages.jpg – wymuszanie, FL            |
+| 2023-12-08T05:53+02 | EVT019   | Screenshot_20231208-055321_Messages.jpg – przemoc słowna            |
+| 2023-12-08T05:52+02 | EVT020   | Screenshot_20231208-055208_Messages.jpg – odrzucenie emocjonalne    |
+| 2023-12-08T05:51+02 | EVT021   | Screenshot_20231208-055100_Messages.jpg – zaprzeczanie, FL, toksyczność |
+| 2024-01-23T07:30+02 | EVT022   | 20240123_073021.jpg – szantaż emocjonalny, depresja, obwinianie     |
+| 2024-02-24T00:00+02 | EVT023   | -5967514667750375482_121 24 luty 2024.jpg – lokalizacja (Google Maps)|
+| 2025-08-24T06:10+02 | EVT024   | DOWOD ZE ONA TRWA NAZWISKO IMIE ADWOKATA.jpg – dowód zawodowy       |
+| 2025-08-24T06:10+02 | EVT025   | ALE RYCZY BECZY  PSYCHOL.jpg – brak tekstu, twarz Kingi, płacz      |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence_ids         | comment                                          |
+|--------|-------|---------|--------|------|-------|----------------------|--------------------------------------------------|
+| 5      | 1     | 4       | 5      | 3    | 3     | [D013-D020]          | Silne dowody psychicznej przemocy/emocjonalności |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D013", "type": "screenshot", "filename": "Screenshot_20231208-054920_Messages.jpg", "timestamp": "2023-12-08T05:49+02", "description": "Obelgi, seksualizacja, wulgarne wyrażenia; gaslighting, presja emocjonalna ('Chuja masz w głowie', 'rycerz shibari').", "tags": ["obelgi", "seksualizacja", "gaslighting", "presja"], "status": "verified"}
+{"evidence_id": "D014", "type": "screenshot", "filename": "Screenshot_20231208-070100_Messages.jpg", "timestamp": "2023-12-08T07:01+02", "description": "Wypowiedzi pogardliwe, kontrolujące ('Mozna osiołka do wodopoju...', 'nie zrobię tego za Ciebie').", "tags": ["pogarda", "kontrola"], "status": "verified"}
+{"evidence_id": "D015", "type": "screenshot", "filename": "Screenshot_20231208-055307_Messages.jpg", "timestamp": "2023-12-08T05:53+02", "description": "MMS z FL, wymuszanie posłuszeństwa, wulgaryzmy, potwierdzenie korzystania z FL ('Masz być rano w pracy', 'W dupie to mam').", "tags": ["FL", "wymuszanie", "wulgaryzmy"], "status": "verified"}
+{"evidence_id": "D016", "type": "screenshot", "filename": "Screenshot_20231208-055321_Messages.jpg", "timestamp": "2023-12-08T05:53+02", "description": "Przemoc słowna, ignorowanie próśb o pomoc ('Udław się tym').", "tags": ["przemoc_slowna"], "status": "verified"}
+{"evidence_id": "D017", "type": "screenshot", "filename": "Screenshot_20231208-055208_Messages.jpg", "timestamp": "2023-12-08T05:52+02", "description": "Odrzucenie emocjonalne, zmienność komunikacyjna ('To już nigdy się do mnie nie odzywaj', 'muszę mieć pracę').", "tags": ["odrzucenie", "zmienność"], "status": "verified"}
+{"evidence_id": "D018", "type": "screenshot", "filename": "Screenshot_20231208-055100_Messages.jpg", "timestamp": "2023-12-08T05:51+02", "description": "Zaprzeczanie faktom, oskarżenia, potwierdzenie FL, toksyczna dynamika ('kłamstwo za kłamstwem', 'oszust').", "tags": ["zaprzeczanie", "oskarżenia", "toksyczność"], "status": "verified"}
+{"evidence_id": "D019", "type": "screenshot", "filename": "20240123_073021.jpg", "timestamp": "2024-01-23T07:30+02", "description": "Szantaż emocjonalny, stany depresyjne, obwinianie ('Bo już mam złe myśli', 'Nie możesz mnie uspokoić?', 'Za co się mścisz?').", "tags": ["szantaż_emocjonalny", "depresja", "obwinianie"], "status": "verified"}
+{"evidence_id": "D020", "type": "screenshot", "filename": "DOWOD ZE ONA TRWA  NAZWISKO IMIE ADWOKATA.jpg", "timestamp": "2025-08-24T06:10+02", "description": "Dowód realnych działań zawodowych Kingi Szczepanek, potwierdzenie tożsamości, wiadomość o rachunku.", "tags": ["dowód_zawodowy", "tożsamość"], "status": "verified"}
+{"evidence_id": "D021", "type": "screenshot", "filename": "-5967514667750375482_121    24 luty 2024.jpg", "timestamp": "2024-02-24T00:00+02", "description": "Google Maps – lokalizacja. Potencjalny dowód spotkania lub przemieszczania się (jeśli powiązany z innym dowodem).", "tags": ["lokalizacja", "maps"], "status": "pending"}
+{"evidence_id": "D022", "type": "screenshot", "filename": "ALE RYCZY BECZY  PSYCHOL.jpg", "timestamp": "2025-08-24T06:10+02", "description": "Brak tekstu OCR; zdjęcie przedstawia twarz Kingi Szczepanek w stanie płaczu, silny przekaz wizualny/kompromitacja.", "tags": ["wizualny_dowód", "emocje", "kompromitacja"], "status": "pending"}
+````
+
+## Tezy i hipotezy
+
+| thesis\_id | description                                                | evidence\_ids                         | status  |
+| ---------- | ---------------------------------------------------------- | ------------------------------------- | ------- |
+| T010       | Wzorzec przemocy psychicznej i emocjonalnej                | \[D013, D014, D015, D016, D017, D019] | open    |
+| T011       | Kinga Szczepanek potwierdziła aktywność na FetLife         | \[D015, D018]                         | open    |
+| T012       | Dowód realnej aktywności zawodowej/tożsamości              | \[D020]                               | open    |
+| T013       | Silny dowód wizualny stanu emocjonalnego/kompromitacji     | \[D022]                               | pending |
+| T014       | Lokalizacja spotkania/możliwość połączenia z innym dowodem | \[D021]                               | pending |
+
+## Dalsze kroki (72h)
+
+* Zarchiwizować screeny + wersje OCR (dublowane na offline/backup).
+* Dołączyć OCR do zgłoszeń dot. przemocy psychicznej, szantażu, aktywności na FL, nadużyć zawodowych.
+* Zbudować linię czasu z powiązaniem cytatów, zmian nastroju i kluczowych deklaracji.
+* Przetworzyć i zaklasyfikować dowody (emocjonalne, seksualne, zawodowe, wizualne).
+* W razie potrzeby wygenerować PDF lub raport pod działania prawne/prokuraturę.
+
+---
+
+---
+
+case\_id: kinga-szczepanek-2024
+status: open
+created\_at: 2025-08-24T06:23+02:00
+source: analiza-nowe-screenshoty
+participants: \[TOKEN\_A, "Kinga Szczepanek"]
+risk\_flags: \[przemoc\_psychiczna, przemoc\_slowna, presja\_ekonomiczna, gaslighting, aktywność\_FetLife, lokalizacja, podwójne\_życie, eskalacja, logi\_GPS]
+latest\_update: 2025-08-24T06:23+02:00
+--------------------------------------
+
+## TL;DR
+
+* Nowa seria screenów z SMS/MMS/Maps ujawnia przemoc słowną, presję ekonomiczną, manipulacje, aktywność na FetLife oraz dowody logistyczne (Google Maps).
+* Wskazano dowody gaslightingu (zaprzeczanie faktom przy jednoczesnym przesyłaniu MMS-ów z FL) i presji ekonomicznej ("będę Cię musiała utrzymywać").
+* Sugerowana linia eskalacji: od neutralnych wiadomości, przez dowody aktywności FL, do przemocy i zerwania.
+* Propozycja: archiwizacja plików w dedykowanych katalogach (przemoc/FL/lokalizacja), eksport do PDF/CSV, budowa linii czasu eskalacji.
+
+## Oś czasu
+
+| timestamp           | event\_id | description                                                                        |
+| ------------------- | --------- | ---------------------------------------------------------------------------------- |
+| 2023-12-08T05:48+02 | EVT026    | Screenshot\_20231208-054838\_Messages.jpg – presja ekonomiczna, upokarzanie        |
+| 2023-12-08T07:01+02 | EVT027    | Screenshot\_20231208-070100\_Messages.jpg – manipulacja, porównania do zwierząt    |
+| 2023-12-08T05:53+02 | EVT028    | Screenshot\_20231208-055307\_Messages.jpg – aktywność FL, wymuszanie, zaprzeczenia |
+| 2023-12-08T05:53+02 | EVT029    | Screenshot\_20231208-055321\_Messages.jpg – agresja, przemoc słowna                |
+| 2023-12-08T05:52+02 | EVT030    | Screenshot\_20231208-055208\_Messages.jpg – wycofanie emocjonalne, kontrola        |
+| 2023-12-08T05:51+02 | EVT031    | Screenshot\_20231208-055100\_Messages.jpg – gaslighting, zaprzeczanie, toksyczność |
+| 2024-02-24T00:00+02 | EVT032    | -5967514667750375482\_121 (24 luty 2024).jpg – lokalizacja z Google Maps           |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence\_ids | comment                                |
+| ------ | ----- | ------- | ------ | ---- | ----- | ------------- | -------------------------------------- |
+| 5      | 1     | 5       | 5      | 3    | 4     | \[D023-D029]  | Dowody przemocy, presji, aktywności FL |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D023", "type": "screenshot", "filename": "Screenshot_20231208-054838_Messages.jpg", "timestamp": "2023-12-08T05:48+02", "description": "Presja ekonomiczna, wulgaryzmy, upokarzanie ('Masz tam jechać i nie stracić pracy', 'Bo kurwa zaraz będę Cię musiała utrzymywać').", "tags": ["presja_ekonomiczna", "upokarzanie", "wulgaryzmy"], "status": "verified"}
+{"evidence_id": "D024", "type": "screenshot", "filename": "Screenshot_20231208-070100_Messages.jpg", "timestamp": "2023-12-08T07:01+02", "description": "Manipulacja, pasywna agresja, porównanie do zwierzęcia ('Osiołek do wodopoju...', 'nie zrobię tego za Ciebie').", "tags": ["manipulacja", "agresja", "wyższość"], "status": "verified"}
+{"evidence_id": "D025", "type": "screenshot", "filename": "Screenshot_20231208-055307_Messages.jpg", "timestamp": "2023-12-08T05:53+02", "description": "Dowód aktywności na FetLife (FL), przymus pracy, zaprzeczania vs rzeczywistość ('W dupie to mam', 'Masz być rano w pracy').", "tags": ["FetLife", "przymus", "zaprzeczenia"], "status": "verified"}
+{"evidence_id": "D026", "type": "screenshot", "filename": "Screenshot_20231208-055321_Messages.jpg", "timestamp": "2023-12-08T05:53+02", "description": "Agresja, przemoc słowna ('Udław się tym').", "tags": ["przemoc_slowna", "agresja"], "status": "verified"}
+{"evidence_id": "D027", "type": "screenshot", "filename": "Screenshot_20231208-055208_Messages.jpg", "timestamp": "2023-12-08T05:52+02", "description": "Wycofanie emocjonalne, kontrola, karanie ciszą ('To już nigdy się do mnie nie odzywaj, księżniczko').", "tags": ["wycofanie", "kontrola", "cisza"], "status": "verified"}
+{"evidence_id": "D028", "type": "screenshot", "filename": "Screenshot_20231208-055100_Messages.jpg", "timestamp": "2023-12-08T05:51+02", "description": "Gaslighting, jawne kłamstwo, wypieranie oczywistych faktów, toksyczna dynamika ('Ja na FL nie wchodzę 😂', 'Oszust i kłamco').", "tags": ["gaslighting", "kłamstwo", "toksyczność"], "status": "verified"}
+{"evidence_id": "D029", "type": "screenshot", "filename": "-5967514667750375482_121 (24 luty 2024).jpg", "timestamp":
+```
+
+
+"2024-02-24T00:00+02", "description": "Lokalizacja z Google Maps – możliwe powiązanie czasoprzestrzenne z miejscem zamieszkania/pracy.", "tags": \["lokalizacja", "Google\_Maps"], "status": "pending"}
+
+````
+
+## Tezy i hipotezy
+
+| thesis_id | description                                                   | evidence_ids                      | status   |
+|-----------|---------------------------------------------------------------|-----------------------------------|----------|
+| T015      | Przemoc słowna, ekonomiczna i psychiczna                      | [D023, D024, D025, D026, D027]    | open     |
+| T016      | Aktywność na FetLife + gaslighting (zaprzeczanie)             | [D025, D028]                      | open     |
+| T017      | Dowody podwójnego życia seksualnego (inbox FL, wiadomości)    | [D025]                            | open     |
+| T018      | Powiązanie czasoprzestrzenne przez Google Maps (spotkania)    | [D029]                            | pending  |
+| T019      | Eskalacja: cykl przemocy, kontrola, relacja breakup-control   | [D027]                            | open     |
+
+## Dalsze kroki (72h)
+
+- Zarchiwizować screeny jako PNG/JPG + eksport CSV/PDF z opisami dowodów.
+- Stworzyć aktówkę prawną: katalogi dowody/FL, dowody/przemoc, dowody/lokalizacja.
+- Połączyć screeny z logami GPS / historią połączeń, jeśli dostępne.
+- Ułożyć szczegółową linię czasu eskalacji i powiązać z kluczowymi wypowiedziami.
+- Przygotować draft struktury zgłoszenia do prokuratury/adwokata.
+
+---
+
+---
+case_id: kinga-szczepanek-2024
+status: open
+created_at: 2025-08-24T06:28+02:00
+source: screeny-sms-mail-lokalizacja
+participants: [TOKEN_A, "Kinga Szczepanek"]
+risk_flags: [szantaż_emocjonalny, narkotyki, amfetamina, przemoc_emocjonalna, kompromitacja, używki, pogarda, audio, wysokie_ryzyko]
+latest_update: 2025-08-24T06:28+02:00
+---
+## TL;DR
+- Nowe screeny i audio dowodzą szantażu emocjonalnego, manipulacji, używania substancji psychoaktywnych (amfetamina), wulgaryzmów oraz kompromitujących zachowań.
+- Plik audio z deklaracją zażycia amfetaminy może być kluczowy do zgłoszenia w prokuraturze lub NIL.
+- Klasyfikacja: bardzo wysoka wartość dowodowa (narkotyki, nadużycia), wysoka (przemoc emocjonalna, manipulacja), kompromitujące (wulgaryzmy, pogarda).
+
+## Oś czasu
+
+| timestamp           | event_id | description                                                        |
+|---------------------|----------|--------------------------------------------------------------------|
+| 2024-01-23T07:30+02 | EVT033   | 20240123_073021.jpg – szantaż emocjonalny, narracja ofiary         |
+| 2024-01-24T09:59+02 | EVT034   | 20240124_095923.jpg – wulgarna wypowiedź, ryzykowne zachowania     |
+| 2025-06-24T15:00+02 | EVT035   | photo1719217042 (9).jpeg – przyznanie się do zażycia amfetaminy    |
+| 2025-06-24T15:01+02 | EVT036   | amfetamina_o_15.aac – oświadczenie audio o zażyciu substancji (jeśli potwierdzona autentyczność) |
+| 2025-06-24T15:02+02 | EVT037   | Kinga krysztal.aac – kompromitujące audio, pogarda, wulgarność     |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence_ids         | comment                                      |
+|--------|-------|---------|--------|------|-------|----------------------|----------------------------------------------|
+| 5      | 1     | 5       | 5      | 4    | 4     | [D030, D031]         | Bardzo wysoka wartość dowodowa: narkotyki, nadużycia |
+| 4      | 2     | 4       | 4      | 2    | 3     | [D032, D033]         | Przemoc emocjonalna, manipulacja             |
+| 3      | 2     | 2       | 4      | 1    | 2     | [D034]               | Kompromitujące językowo                      |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D030", "type": "image", "filename": "photo1719217042 (9).jpeg", "timestamp": "2025-06-24T15:00+02", "description": "Wiadomość: 'Brałam amfetaminę o 15', 'Kinga ćpunem i kłamcą' – oświadczenie o zażyciu amfetaminy. Kluczowe przy zgłoszeniu do prokuratury/NIL, jeśli potwierdzona autentyczność audio.", "tags": ["amfetamina", "narkotyki", "oświadczenie", "wysoka_wartość"], "status": "verified"}
+{"evidence_id": "D031", "type": "audio", "filename": "amfetamina_o_15.aac", "timestamp": "2025-06-24T15:01+02", "description": "Plik audio – deklaracja zażycia amfetaminy (jeśli głos potwierdzony autoryzacyjnie).", "tags": ["amfetamina", "audio", "dowód"], "status": "pending"}
+{"evidence_id": "D032", "type": "image", "filename": "20240123_073021.jpg", "timestamp": "2024-01-23T07:30+02", "description": "'Godzinę temu się ze mną żegnasz...', 'Nie możesz mnie uspokoić?', 'Za co się mścisz?' – szantaż emocjonalny, manipulacja, narracja ofiary po agresji.", "tags": ["szantaż_emocjonalny", "manipulacja", "narracja_ofiary"], "status": "verified"}
+{"evidence_id": "D033", "type": "image", "filename": "20240124_095923.jpg", "timestamp": "2024-01-24T09:59+02", "description": "'Mam wino. Mam słodycze od Kejsi. Mam wyjebane na chujów' – wulgarna wypowiedź, stan pobudzenia emocjonalnego, ryzykowne zachowania.", "tags": ["wulgaryzmy", "ryzyko", "emocje"], "status": "verified"}
+{"evidence_id": "D034", "type": "audio", "filename": "Kinga krysztal.aac", "timestamp": "2025-06-24T15:02+02", "description": "Kompromitujące audio: wulgarność, pogarda, sprzeczne zachowania.", "tags": ["kompromitacja", "audio", "wulgaryzmy", "pogarda"], "status": "pending"}
+````
+
+## Tezy i hipotezy
+
+| thesis\_id | description                                                   | evidence\_ids | status |
+| ---------- | ------------------------------------------------------------- | ------------- | ------ |
+| T020       | Przyznanie się do zażycia amfetaminy, uzależnienie, nadużycia | \[D030, D031] | open   |
+| T021       | Przemoc i szantaż emocjonalny, manipulacja, dramatyzacja      | \[D032, D033] | open   |
+| T022       | Kompromitacja zawodowa, pogarda, ryzykowne zachowania         | \[D034]       | open   |
+
+## Dalsze kroki (72h)
+
+* Potwierdzić autentyczność audio (weryfikacja głosu, metadane plików).
+* Przygotować dokumentację do zgłoszenia (prokuratura, NIL).
+* Zarchiwizować wszystkie materiały w dedykowanych katalogach (narkotyki, przemoc, kompromitacja).
+* Uporządkować dowody na osi czasu, połączyć z wcześniejszymi screenami/audio.
+* Przygotować streszczenie pod działania prawne.
+
+---
+
+---
+
+case\_id: kinga-szczepanek-2024
+status: open
+created\_at: 2025-08-24T06:33+02:00
+source: facebook-fetlife-analiza
+participants: \[TOKEN\_A, "Kinga Szczepanek"]
+risk\_flags: \[naruszenie\_cyfrowe, nieautoryzowany\_dostęp, zmiana\_hasła, logowania\_IP, blokada\_fetlife, dezinformacja, eskalacja, kontrola\_danych]
+latest\_update: 2025-08-24T06:33+02:00
+--------------------------------------
+
+## TL;DR
+
+* Udokumentowano zmianę hasła do konta Facebook Rafała Bartosika (Kraków, 15.09.2023, Chrome/Windows); możliwy nieautoryzowany dostęp.
+* Liczne logowania z różnych adresów IP/urządzeń wskazują na potencjalne naruszenia prywatności i powiązania z Kingą Szczepanek.
+* Blokada konta FetLife za rzekome udostępnienie danych prywatnych (PII Malicious, "Private Conversation") – możliwy atak dezinformacyjny lub uciszający.
+* Materiały te łączą się z wcześniejszymi dowodami (SMS, audio, lokalizacje) – budują profil cyfrowej kontroli/uciszania.
+
+## Oś czasu
+
+| timestamp           | event\_id | description                                                                                |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------ |
+| 2023-09-15T18:54+02 | EVT038    | Zmiana hasła do Facebooka przez Chrome/Windows w Krakowie                                  |
+| 2023-09-15T18:36+02 | EVT039    | Logowania z różnych urządzeń/IP – Android, Windows, Samsung Galaxy S9                      |
+| 2023-12-07T09:29+02 | EVT040    | Blokada konta FetLife za PII Malicious, zgłoszenie prywatnej rozmowy, timeout do 6.01.2024 |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence\_ids       | comment                                      |
+| ------ | ----- | ------- | ------ | ---- | ----- | ------------------- | -------------------------------------------- |
+| 5      | 1     | 5       | 4      | 3    | 4     | \[D035, D036, D037] | Kluczowe dla dowodzenia naruszeń i eskalacji |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D035", "type": "screenshot", "filename": "Screenshot_20230915-185435_Poczta.jpg", "timestamp": "2023-09-15T18:54+02", "description": "Zmiana hasła do konta Facebook Rafała, 15.09.2023, 16:07 (UTC+2), lokalizacja: Kraków, Chrome/Windows.", "tags": ["facebook", "zmiana_hasla", "Kraków", "nieautoryzowany_dostęp"], "status": "verified"}
+{"evidence_id": "D036", "type": "screenshot", "filenames": ["Screenshot_20230915-185421_Facebook.jpg","Screenshot_20230915-183913_Facebook.jpg","Screenshot_20230915-183907_Facebook.jpg","Screenshot_20230915-183828_Facebook.jpg","Screenshot_20230915-183617_Facebook.jpg","Screenshot_20230915-183605_Facebook.jpg","Screenshot_20230915-183558_Facebook.jpg"], "timestamp": "2023-09-15T18:36+02", "description": "Logowania na konto Facebook z różnych IP/urządzeń (Android, Windows, Galaxy S9); IP: 5.173.34.94, 46.204.101.149, 31.182.77.98, 91.206.155.185, 91.231.92.5.", "tags": ["facebook", "logowania", "adresy_IP", "urządzenia"], "status": "verified"}
+{"evidence_id": "D037", "type": "screenshot", "filename": "Screenshot_20231207-092952_Samsung Internet.jpg", "timestamp": "2023-12-07T09:29+02", "description": "Blokada konta FetLife (timeout 1 miesiąc, do 06.01.2024, godz. 11:08) za PII Malicious – złośliwe udostępnienie danych, zgłoszenie 'Private Conversation'.", "tags": ["fetlife", "blokada", "PII", "dezinformacja"], "status": "verified"}
+```
+
+## Tezy i hipotezy
+
+| thesis\_id | description                                                                  | evidence\_ids       | status |
+| ---------- | ---------------------------------------------------------------------------- | ------------------- | ------ |
+| T023       | Próba kontroli cyfrowej konta Facebook (nieautoryzowany dostęp/zmiana hasła) | \[D035, D036]       | open   |
+| T024       | Dezinformacja/eskalacja konfliktu – blokada FetLife                          | \[D037]             | open   |
+| T025       | Łączność z wcześniejszymi dowodami (cyfrowa kontrola, uciszanie)             | \[D035, D036, D037] | open   |
+
+## Dalsze kroki (72h)
+
+* Zarchiwizować wszystkie screeny z Facebooka: IP, urządzenia, daty, godziny.
+* Zmienić hasła, włączyć 2FA na wszystkich kontach.
+* Dołączyć screeny jako załączniki do zgłoszenia cyfrowego nękania/nieautoryzowanego dostępu.
+* Jeśli planujesz zgłoszenie – przygotować raport chronologiczny i draft pisma do Facebooka/organów ścigania.
+* Powiązać materiał z innymi dowodami (SMS, audio, lokalizacja).
+
+```
+
+---
+
+**Pełna “sklejka” wszystkich dotychczas wygenerowanych YAML-i dla sprawy Kingi Szczepanek.  
+Możesz wywołać dowolną sekcję, szczegółowy spis dowodów (po ID), konkretne filtry, checklisty lub eksport do pliku – wszystko w tej samej strukturze!**
+```
+````yaml
+---
+case_id: kinga-szczepanek-2024
+status: open
+created_at: 2025-08-24T06:55+02:00
+source: analiza-wstepna-sms-telegram
+participants: [TOKEN_A, "Kinga Szczepanek", "Kejsi", "Wojtek"]
+risk_flags: [grozby_karalne, wymuszenie, narkotyki, przemoc_psychiczna, nękanie, osoby_trzecie, eskalacja, art_190_KK, art_191_KK, art_282_KK, art_56_uopn, art_62_uopn]
+latest_update: 2025-08-24T06:55+02:00
+---
+## TL;DR
+- Screeny z SMS, Telegrama i WhatsApp dokumentują groźby karalne, wymuszenie dostarczenia narkotyków, przemoc psychiczną, upokarzanie oraz zachowania świadczące o uzależnieniu Kingi Szczepanek.
+- Przekazy wskazują na klasyczny cykl przemocy, elementy szantażu, presję czasową i wielokrotne powtarzanie groźby utraty pracy.
+- Udział osób trzecich (Kejsi, Wojtek) – potwierdzenie powtarzalnego schematu nabywania substancji i uzależnienia.
+- Wartość procesowa dowodów oceniona jako bardzo wysoka – możliwe użycie w postępowaniu karnym i wizerunkowym.
+- Zalecenia: zabezpieczyć metadane, archiwizować pełne rozmowy, dołączyć do zgłoszenia karnego, wykorzystać w pakietach medialnych.
+
+## Oś czasu
+
+| timestamp           | event_id | description                                                                                       |
+|---------------------|----------|---------------------------------------------------------------------------------------------------|
+| 2024-01-04T10:30+02 | EVT041   | SMS: powtarzające się groźby utraty pracy, deklaracje przysięgi, groźba żandarmerii, kontakt z "Wojtkiem" |
+| 2024-01-04T10:33+02 | EVT042   | Telegram/WhatsApp: wymuszanie zdobycia i dostarczenia narkotyków, agresja, groźby instytucjonalne         |
+| 2024-01-04T10:35+02 | EVT043   | SMS: "W zębach kurwo", "już Ci się czas kurczy", "jesteś na głodzie" – poniżanie, przemoc psychiczna      |
+| 2024-01-04T10:40+02 | EVT044   | Wiadomości z Kejsi: potwierdzenie, że Kinga była znana z zamawiania dużych ilości "szybkości"             |
+| 2024-01-04T10:42+02 | EVT045   | Rozmowy z osobami trzecimi: schemat uzależnienia, regularność zamówień, łatwa identyfikacja Kingi         |
+
+## Filtry decyzyjne
+
+| impact | legal | urgency | energy | cost | reach | evidence_ids          | comment                                           |
+|--------|-------|---------|--------|------|-------|-----------------------|---------------------------------------------------|
+| 5      | 1     | 5       | 5      | 4    | 4     | [D038, D039]          | Groźby karalne, wymuszenie, nadużycia, narkotyki  |
+| 5      | 2     | 5       | 5      | 4    | 4     | [D040, D041, D042]    | Przemoc psychiczna, osoby trzecie, uzależnienie   |
+
+## Dowody
+
+```jsonl
+{"evidence_id": "D038", "type": "screenshot", "filename": "SMS_20240104_grozby.jpg", "timestamp": "2024-01-04T10:30+02", "description": "Groźby utraty pracy, wielokrotne powtórzenia, formuły przysięgi, presja czasowa ('Przysięgam na wszystko, że jutro stracisz pracę').", "tags": ["grozby_karalne", "presja", "art_190_KK"], "status": "verified"}
+{"evidence_id": "D039", "type": "screenshot", "filename": "Telegram_20240104_wymuszenie.jpg", "timestamp": "2024-01-04T10:33+02", "description": "Wymuszenie zdobycia i dostarczenia narkotyków ('Masz czas do 18...', 'W zębach kurwo'), groźby żandarmerią, kontakt z 'Wojtkiem'.", "tags": ["wymuszenie", "art_191_KK", "art_282_KK", "narkotyki"], "status": "verified"}
+{"evidence_id": "D040", "type": "screenshot", "filename": "SMS_20240104_upokorzenie.jpg", "timestamp": "2024-01-04T10:35+02", "description": "Przemoc psychiczna i emocjonalna ('W zębach, kurwo', 'Już Ci się czas kurczy', 'Jesteś na głodzie'), ciąg komunikatów agresywnych i poniżających.", "tags": ["przemoc_psychiczna", "nękanie", "cykl_przemocy"], "status": "verified"}
+{"evidence_id": "D041", "type": "screenshot", "filename": "Kejsi_20240104_potwierdzenie.jpg", "timestamp": "2024-01-04T10:40+02", "description": "Rozmowy z Kejsi – potwierdzenie, że Kinga była rozpoznawalną klientką dealerów, regularnie zamawiała duże ilości szybkości (amfetaminy), łatwa do zidentyfikowania.", "tags": ["osoby_trzecie", "dealerzy", "uzależnienie"], "status": "review"}
+{"evidence_id": "D042", "type": "screenshot", "filename": "WhatsApp_20240104_zamowienia.jpg", "timestamp": "2024-01-04T10:42+02", "description": "Wiadomości wskazujące na powtarzalność zamówień narkotyków, schemat uzależnienia, obecność innych potwierdzających.", "tags": ["schemat_uzależnienia", "osoby_trzecie", "powtarzalność"], "status": "review"}
+````
+
+## Tezy i hipotezy
+
+| thesis\_id | description                                           | evidence\_ids | status |
+| ---------- | ----------------------------------------------------- | ------------- | ------ |
+| T026       | Groźby karalne i wymuszenie zachowań (190 KK, 191 KK) | \[D038, D039] | open   |
+| T027       | Przemoc psychiczna, upokorzenie, stalking             | \[D040]       | open   |
+| T028       | Uzależnienie, powtarzalność, relacje z dealerami      | \[D041, D042] | open   |
+
+## Dalsze kroki (72h)
+
+* Zabezpieczyć pełne kopie rozmów (TXT, JSON) z metadanymi.
+* Dołączyć screeny do zawiadomienia karnego jako załącznik PDF.
+* Przeprowadzić analizę porównawczą ciągu komunikatów (schemat cyklu przemocy, presja czasowa).
+* Przygotować wersję skróconą do użytku w sądzie (kategorie: groźby karalne, wymuszenie, nękanie, narkotyki).
+* Włączyć screeny do materiałów medialnych – wykorzystać w reportażu tematycznym.
+* Zabezpieczyć ewentualne zeznania osób trzecich (Kejsi) jako materiał pomocniczy.
+
+```
+
+---
+```
